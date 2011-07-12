@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS OOP - inheritance</title>
+    <script type="text/javascript" src="js/dojo/dojo.js" djConfig="parseOnLoad:true,isDebug:true"></script>
+    <link rel="stylesheet" type="text/css" href="js/dijit/themes/claro/claro.css">
+</head>
+<body>
+<script type="text/javascript">
+    //registerModulePath: path to the file specifies the module
+    dojo.registerModulePath("yz", "../nesj")
+    //load the module
+    dojo.require("yz.main");
+
+    //dojo.addOnload: load after all dojo.require() and other their recursive dependencies have loaded
+    dojo.addOnLoad(function () {
+        var myTest = new Test("one", "two");
+        myTest.other("three");
+        var myJsTest = new JsTest("four", "five");
+        myJsTest.other("six");
+    });
+</script>
+
+</body>
+</html>
+
