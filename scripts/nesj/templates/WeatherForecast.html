@@ -1,0 +1,18 @@
+<div>
+   <span class="titleLeft"><span data-dojo-attach-point="city"></span> Weather Forecast</span>
+   <span id="setCBtn" data-dojo-attach-point="changeCity">Change City</span>
+   <div id="newCityDiv" data-dojo-attach-point="changeCityDiv" style="display:none">Enter Zip Code:
+   <input data-dojo-attach-point="cityName" id="cityName" name="cityName" value="" />
+   <img src="../images/arrow_right.ico" data-dojo-attach-point="changeCityIcon" class="icons" title="change city" />
+   <img src="../images/close.ico" data-dojo-attach-point="cancelIcon" class="icons" title="cancel" />
+   </div>
+   <div class="clear"></div>
+   <div data-dojo-attach-point="errorMesg" style="display:none">Location no found. Please try another zip code.</div>
+   <div data-dojo-attach-point="weatherReport">
+      <table data-dojo-attach-point="reportTable" class="reportTable">
+
+      </table>
+
+   </div>
+   
+</div>

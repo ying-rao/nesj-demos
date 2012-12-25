@@ -1,0 +1,36 @@
+@font-face {
+    font-family: CursiveSans;
+    src: url("CursiveSans.ttf");
+}
+
+body{
+    font-family: CursiveSans, sans-serif;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+section {
+    width: 100%;
+    clear: both;
+}
+
+article div {
+    -webkit-column-count: 2;
+    -webkit-column-gap: 20px;
+    -moz-column-count: 2;
+    -moz-column-count: 20px;
+}
+
+h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+footer {
+    margin-top: 30px;
+    color: #777;
+    border-top: solid 1px;
+}

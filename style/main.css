@@ -1,0 +1,93 @@
+@CHARSET "UTF-8";
+
+body {
+    font-family: san-serif;
+    font-size: 14px;
+}
+
+.titleLeft {
+    display: inline-block;
+    float: left;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding-bottom: 15px;
+    line-height: 2em;
+}
+
+.dijitButton {
+    margin-top: 18px;
+}
+
+div.clear10 {
+    clear: both;
+    height: 10px;
+    display: block;
+}
+
+div.clear {
+    clear: both;
+}
+
+/* UserRegistration*/
+#registrationContainer {
+    border: 1px solid #eeeeee;
+    border-radius: 8px;
+    width: 220px;
+    height: 280px;
+    padding: 5px 10px;
+    overflow: visible;
+    display: inline-block;
+    float: left;
+}
+
+#registrationContainer label {
+    display: inline-block;
+    width: 80px;
+}
+
+.dijitTextBox {
+    width: 180px;
+    height: 22px;
+    border-radius: 5px;
+}
+
+/* WeatherReport*/
+.weatherReport {
+    border: 1px solid #eeeeee;
+    border-radius: 8px;
+    margin-left: 50px;
+    width: 700px;
+    height: 280px;
+    padding: 5px 10px;
+    display: inline-block;
+    float: left;
+}
+
+.reportTable td {
+    width: 70px;
+    padding: 10px 7px;
+    vertical-align: top;
+}
+
+#setCBtn, #newCityDiv {
+    float: left;
+    padding-left: 25px;
+    font-size: 0.9em;
+    line-height: 3em;
+}
+
+#setCBtn{
+    cursor: pointer;
+}
+
+#cityName {
+    width: 70px;
+}
+
+.icons {
+    line-height: 2.5em;
+    padding-bottom: 5px;
+    padding-left: 3px;
+    vertical-align: bottom;
+    cursor: pointer;
+}
