@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
     <script data-dojo-config="baseUrl:'../scripts/',isDebug:true,async:false,
             packages:[{name:'dojo',location:'dojo'},{name:'dijit',location:'dijit'},{name:'nesj',location:'nesj'}]"
             src="../scripts/dojo/dojo.js"></script>
@@ -8,43 +10,27 @@
     <link href="../scripts/dijit/themes/claro/claro.css" rel="stylesheet" type="text/css"/>
     <link href="../style/main.css" rel="stylesheet" type="text/css"/>
 
-    <title>Google Books Demo Page</title>
+    <title>Google Books Search Demo</title>
 
 </head>
 
 <body class="claro">
-<script type="text/javascript">
 
-    function OnLoadCallback(){
-        //specify the query parameters
-        //visit https://developers.google.com/books/docs/v1/using for more information of available query parameters
-        var params={
-            //search key words
-            q:"javascript+advanced",
-            //fields to return. return full information by default.
-            fields:"items(volumeInfo/title, volumeInfo/authors,volumeInfo/publishedDate, volumeInfo/description, volumeInfo/imageLinks/small)",
-            //maximum number of results to return. 10 by default
-            maxResults:20,
-            //sorting method. "relevance" by default
-            orderBy:"newest"
-        };
+    <section>
+        <div id="mainContent"></div>
+    </section>
 
-        gapi.client.load('books', 'v1', function(data) {
-            console.log('Client loaded');
+    <script data-type="text/javascript">
+        function onLoadCallback() {
 
-            //specify api key but it's not required for this query request
-            //gapi.client.setApiKey("{Your API key}");
-
-            var restRequest = gapi.client.request({
-                //specify the query request
-                path: "/books/v1/volumes?q="+params.q+"&fields="+params.fields+"&maxResults="+params.maxResults+"&orderBy="+params.orderBy
+            require(["dojo/dom", "nesj/GoogleBooksSearch", "dojo/parser"], function (dom, GoogleBooksSearch, parser) {
+                new GoogleBooksSearch({client:gapi.client}, dom.byId("mainContent")).startup();
+                parser.parse();
             });
+        }
+    </script>
+    <!-- load script to access Google API-->
+    <script src="https://apis.google.com/js/client.js?onload=onLoadCallback"></script>
 
-            //sent the request
-            restRequest.execute(function(resp) { console.log(resp); });
-        });
-    }
-</script>
-<script src="https://apis.google.com/js/client.js?onload=OnLoadCallback"></script>
 </body>
 </html>

@@ -91,3 +91,9 @@ div.clear {
     vertical-align: bottom;
     cursor: pointer;
 }
+
+/* Google Books Search */
+label{
+    color: #46038F;
+    font-weight: bold;
+}
